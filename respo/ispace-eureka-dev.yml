@@ -1,0 +1,15 @@
+# 本服务名
+spring:
+  application:
+    name: ispace-eureka
+
+# 服务端口
+server:
+  port: 8761 # eureka 服务器端口号。尽管无论官网还是大部分参考书都使用8761，但默认并不是，而是8080
+
+eureka:
+  client:
+    # 默认情况下，eureka server 同时也是 eureka client，用于相互注册形成高可用 eureka 服务。
+    # 单点时，如果 registerWithEureka 配置为 true，则 eureka server 会报错 Cannot execute request on any known server
+    registerWithEureka: false # 是否注册到eureka服务，默认为 true，当前已为 eureka server，且单点 eureka，故配置为 false
+    fetchRegistry: false # 是否在本地缓存注册表信息，默认为 true，当前为单点eureka server，不需要从其他 eureka 除获取注册表信息，更谈不上缓存，故配置为 false
