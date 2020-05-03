@@ -11,3 +11,13 @@ spring:
       test-on-borrow: true
       # MySQL 8.x: com.mysql.cj.jdbc.Driver
       driver-class-name: com.mysql.jdbc.Driver
+
+feign:
+  hystrix:
+    enabled: true
+
+mybatis:
+  type-aliases-package: com.ylon95.ispace.common.domain
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    cache-enabled: true
