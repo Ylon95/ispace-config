@@ -3,6 +3,11 @@ spring:
   application:
     name: ispace-upload
 
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
 # 服务端口
 server:
   port: 8505
