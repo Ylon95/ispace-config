@@ -2,7 +2,7 @@
 spring:
   application:
     name: ispace-upload
-
+# 文件上传大小限制配置
   servlet:
     multipart:
       max-file-size: 10MB
